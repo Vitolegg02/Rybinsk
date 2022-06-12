@@ -66,7 +66,7 @@ with st.echo(code_location='below'):
 
 
     st.write("Ну все, мы погуляли по рыбинску, хотим спать в отель. Но вот вопрос, а во сколько приедет наш автобус? Теоретически, мы могли бы просто открыть Яндекс карты и посмотреть там. Но нет, давайте лучше соскрепим какой-то рандомный сайт, перемучаемся десять раз, а потом уже получим че-то.")
-    transport_df = pd.read_csv(r"C:\Users\vital\busses")
+    transport_df = pd.read_csv(r"busses")
 
     st.write("Короче, я тут все делал в Юпитере, а потом уже запустил чисто цсвшку, если что, смотрите в прикрепе или где-то.")
     st.write("Ну тут видно, что некоторые автобусы не смогли скачаться нормально, но в основном это были маршруты там которые несколько раз в день ездят, так что в целом это основная информация, которая нам нужна.")
@@ -93,7 +93,7 @@ with st.echo(code_location='below'):
     st.write("Наконец, давайте рассмотрим образование в Рыбинске, мало ли вдруг вы после моей экскурсии с одной фоткой захотели переехать. Тогда ведь нужно знать, что ждет ваших детей.")
     st.write("Давайте скачаем данные по школам Ярославской области (правда за 2016 год), а затем выберем только те школы, которые находятся в г. Рыбинске.")
 
-    schools = pd.read_excel(r"C:\Users\vital\Downloads\Егешники.xlsx")
+    schools = pd.read_excel(r"Егешники.xlsx")
     cols = ["Full name", "Russian language,amount", "Russian language,GPA", "Mathematics profil,amount", "Mathematics profil,GPA", "Physics ,amount", "Physics,GPA"]
     ryb_schools = schools[schools['Name area'].isin(["г. Рыбинск", "Рыбинский"])][cols]
     ryb_schools.columns = ["name", "number_rus", "score_rus", "number_math", "score_math", "number_phys", "score_phys"]
