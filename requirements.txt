@@ -4,3 +4,4 @@ requests
 seaborn
 networkx
 translate
+openpyxl
