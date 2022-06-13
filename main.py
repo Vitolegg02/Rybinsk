@@ -59,7 +59,7 @@ with st.echo(code_location='below'):
 
     st.write("Теперь, когда мы попали в Рыбинск давайте посмотрим достопримечательности:")
 
-    picture = Image.open(r"C:\Users\vital\Downloads\Соборка.jpg")
+    picture = Image.open(r"Соборка.jpg")
     st.image(picture)
     st.write("Ну это короче соборная площадь и там еще мост и что-то еще.")
 
